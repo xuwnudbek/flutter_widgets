@@ -4,42 +4,48 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppThemes {
   static final lightTheme = ThemeData(
+    dividerColor: AppColors.transparent,
     fontFamily: "Montserrat",
     textTheme: TextTheme(
-      titleLarge: TextStyle(
+      titleLarge: GoogleFonts.montserrat(
         fontSize: 24,
         fontWeight: FontWeight.bold,
         color: AppColors.textLight,
       ),
-      titleMedium: TextStyle(
+      titleMedium: GoogleFonts.montserrat(
         fontSize: 20,
         fontWeight: FontWeight.w600,
         color: AppColors.textLight,
       ),
-      titleSmall: TextStyle(
+      titleSmall: GoogleFonts.montserrat(
         fontSize: 16,
         fontWeight: FontWeight.w500,
         color: AppColors.textLight,
       ),
-      bodyLarge: TextStyle(
+      bodyLarge: GoogleFonts.montserrat(
         fontSize: 16,
         color: AppColors.textLight,
       ),
-      bodyMedium: TextStyle(
+      bodyMedium: GoogleFonts.montserrat(
         fontSize: 14,
         color: AppColors.textLight,
       ),
-      bodySmall: TextStyle(
+      bodySmall: GoogleFonts.montserrat(
         fontSize: 12,
         color: AppColors.textLight,
       ),
     ),
     brightness: Brightness.light,
     primaryColor: AppColors.primary,
-    scaffoldBackgroundColor: AppColors.backgroundLight,
+    scaffoldBackgroundColor: AppColors.white,
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.primary,
+      foregroundColor: Colors.white,
+      shadowColor: AppColors.primary.withValues(alpha: 0.5),
+    ),
     cardTheme: CardTheme(
-      color: AppColors.cardLight,
-      elevation: 2,
+      color: AppColors.white,
+      elevation: 5,
       margin: EdgeInsets.all(8),
     ),
     colorScheme: ColorScheme.light(
@@ -52,12 +58,34 @@ class AppThemes {
       style: TextButton.styleFrom(
         fixedSize: Size.fromHeight(40),
         foregroundColor: AppColors.white,
-        backgroundColor: AppColors.white.withValues(alpha: 0.2),
+        backgroundColor: AppColors.white.withValues(alpha: 0.0),
+      ),
+    ),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(
+        fixedSize: Size.square(40),
+        foregroundColor: AppColors.textLight,
+        backgroundColor: AppColors.white.withValues(alpha: 0.1),
+      ),
+    ),
+    expansionTileTheme: ExpansionTileThemeData(
+      backgroundColor: AppColors.white,
+      collapsedBackgroundColor: AppColors.white,
+      iconColor: AppColors.textLight,
+      textColor: AppColors.textLight,
+      collapsedIconColor: AppColors.textLight,
+      collapsedShape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
       ),
     ),
   );
 
   static final darkTheme = ThemeData(
+    dividerColor: AppColors.transparent,
+    brightness: Brightness.dark,
     fontFamily: "Montserrat",
     textTheme: TextTheme(
       titleLarge: GoogleFonts.montserrat(
@@ -67,12 +95,12 @@ class AppThemes {
       ),
       titleMedium: GoogleFonts.montserrat(
         fontSize: 20,
-        fontWeight: FontWeight.w700,
+        fontWeight: FontWeight.w600,
         color: AppColors.textDark,
       ),
       titleSmall: GoogleFonts.montserrat(
         fontSize: 16,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w500,
         color: AppColors.textDark,
       ),
       bodyLarge: GoogleFonts.montserrat(
@@ -88,17 +116,16 @@ class AppThemes {
         color: AppColors.textDark,
       ),
     ),
-    brightness: Brightness.dark,
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.backgroundDark,
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.primary,
+      backgroundColor: AppColors.backgroundDark,
       foregroundColor: Colors.white,
       elevation: 0,
     ),
     cardTheme: CardTheme(
       color: AppColors.cardDark,
-      elevation: 2,
+      elevation: 5,
       margin: EdgeInsets.all(8),
     ),
     colorScheme: ColorScheme.dark(
@@ -110,8 +137,28 @@ class AppThemes {
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         fixedSize: Size.fromHeight(40),
+        foregroundColor: AppColors.white,
+        backgroundColor: AppColors.white.withValues(alpha: 0.0),
+      ),
+    ),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(
+        fixedSize: Size.square(40),
         foregroundColor: AppColors.textDark,
-        backgroundColor: AppColors.backgroundDark,
+        backgroundColor: AppColors.white.withValues(alpha: 0.1),
+      ),
+    ),
+    expansionTileTheme: ExpansionTileThemeData(
+      backgroundColor: AppColors.cardDark,
+      collapsedBackgroundColor: AppColors.cardDark,
+      iconColor: AppColors.textDark,
+      textColor: AppColors.textDark,
+      collapsedIconColor: AppColors.textDark,
+      collapsedShape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
       ),
     ),
   );
