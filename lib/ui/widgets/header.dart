@@ -47,12 +47,12 @@ class Header extends StatelessWidget {
           decoration: BoxDecoration(
             color: appBarTheme.backgroundColor,
             boxShadow: [
-              BoxShadow(
-                color: AppColors.white.withValues(alpha: 0.1),
-                blurRadius: 16,
-                spreadRadius: 0,
-                offset: Offset(0, 4),
-              ),
+              // BoxShadow(
+              //   color: themeData.brightness == Brightness.dark ? AppColors.shadowLight : AppColors.shadowDark,
+              //   blurRadius: 4,
+              //   spreadRadius: 0,
+              //   offset: Offset(0, 2),
+              // ),
             ],
           ),
           child: Row(
@@ -148,7 +148,7 @@ class Header extends StatelessWidget {
                     context.read<MainProvider>().themeMode = ThemeMode.dark;
                   }
                 },
-              )
+              ),
             ],
           ),
         ),

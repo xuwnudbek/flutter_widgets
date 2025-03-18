@@ -13,13 +13,15 @@ class AppColors {
   static const Color warning = Color(0xFFffcc00);
 
   // Light Theme Colors
-  static const Color backgroundLight = Color(0xFFf5f5f5);
+  static const Color backgroundLight = Color(0xFFf0f0f0);
+  static Color shadowLight = Color(0xFFFFFFFF).withValues(alpha: 0.1);
   static const Color textLight = Color(0xFF212121);
   static const Color cardLight = Color(0xFFFFFFFF);
   static const Color transparent = Colors.transparent;
 
   // Dark Theme Colors
   static const Color backgroundDark = Color(0xFF121212);
+  static Color shadowDark = Color(0xFF000000).withValues(alpha: 0.1);
   static const Color textDark = Color(0xFFDDDDDD);
   static const Color cardDark = Color(0xFF1E1E1E);
 }

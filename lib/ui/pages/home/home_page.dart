@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_widgets/ui/providers/home_provider.dart';
 import 'package:flutter_widgets/ui/widgets/header.dart';
 import 'package:flutter_widgets/utils/theme/app_colors.dart';
@@ -91,16 +90,17 @@ class HomePage extends StatelessWidget {
                                       children: [
                                         Text(
                                           "Developed by",
-                                          style: textTheme.titleSmall?.copyWith(
-                                            color: AppColors.textDark,
-                                          ),
+                                          style: textTheme.titleSmall,
                                         ),
                                         SizedBox(
                                           width: 150,
-                                          height: 40,
-                                          child: SvgPicture.asset(
-                                            "assets/images/jetbrains.svg",
-                                            fit: BoxFit.contain,
+                                          // height: 40,
+                                          child: Text(
+                                            "ALGOTeam",
+                                            style: textTheme.titleMedium?.copyWith(
+                                              color: AppColors.primary,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -114,7 +114,7 @@ class HomePage extends StatelessWidget {
                                     width: 400,
                                     height: 400,
                                     decoration: BoxDecoration(
-                                      color: (themeData.brightness == Brightness.dark ? AppColors.white : AppColors.cardDark).withValues(alpha: 0.1),
+                                      // color: (themeData.brightness == Brightness.dark ? AppColors.white : AppColors.cardDark).withValues(alpha: 0.1),
                                       borderRadius: BorderRadius.circular(32),
                                     ),
                                     padding: EdgeInsets.all(16),

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 
 class StorageService {
@@ -24,5 +25,17 @@ class StorageService {
 
   static bool hasData(String key) {
     return _storage.hasData(key);
+  }
+
+  static ThemeMode getThemeMode() {
+    final themeMode = _storage.read<String>("themeMode");
+    switch (themeMode) {
+      case "light":
+        return ThemeMode.light;
+      case "dark":
+        return ThemeMode.dark;
+      default:
+        return ThemeMode.light;
+    }
   }
 }

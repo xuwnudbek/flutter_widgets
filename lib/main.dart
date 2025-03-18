@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widgets/ui/providers/main_provider.dart';
 import 'package:flutter_widgets/ui/routes/app_routes.dart';
 import 'package:flutter_widgets/utils/theme/app_themes.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  GetStorage.init("storage");
+
   runApp(const App());
 }
 
